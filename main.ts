@@ -17,14 +17,14 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
         mySprite.vy = -98
     }
 })
-scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile`, function (sprite, location) {
-    tiles.setTileAt(location, assets.tile`transparency16`)
-    timer += 7
-    music.baDing.play()
-})
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile3`, function (sprite, location) {
     music.powerUp.playUntilDone()
     game.reset()
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile20`, function (sprite, location) {
+    tiles.setTileAt(location, assets.tile`transparency16`)
+    timer += 7
+    music.baDing.play()
 })
 scene.onOverlapTile(SpriteKind.Player, grafxkid.blueBrickBlock, function (sprite, location) {
     mySprite.vy = -170
@@ -196,22 +196,22 @@ blockMenu.onMenuOptionSelected(function (option, index) {
     blockMenu.closeMenu()
     blockMenu.setControlsEnabled(false)
     mySprite = sprites.create(img`
-        5 . . . . . . . . . . . . . . 
-        5 . . . . . . . . . . . . . . 
-        5 5 . . . . . . . . . . . . . 
-        4 5 . . . . . . . . . . . . . 
-        . 4 5 . . . . . . . . . . . . 
-        . 4 5 b b b b b b . . . . . . 
-        . . b b b b b b b b . . . . . 
-        . . b b b b b c c c . . . . . 
-        . . b b b b c f f f . . . . . 
-        . b c b b c f f f f . . . . . 
-        . b . c b b c c c c . . f . . 
-        . b . b c c c c c c . f 2 f . 
-        . e c b b b b b b b f 2 2 2 f 
-        . e . b b b b b b b c f 2 f . 
-        . . . . c c b b c c . f 2 f . 
-        . . . . f f . . f f . . f . . 
+        . 1 . . 1 1 1 1 . . . 
+        1 5 1 1 c c c c 1 . . 
+        1 5 c c b b b b c 1 . 
+        1 c b b b b b b c 1 . 
+        1 c b b c c c c c 1 . 
+        1 c b c f f f f f c 1 
+        1 c b c f 5 f f 5 c 1 
+        1 c b c f f f f f c 1 
+        1 c b b c c c c c 1 . 
+        . 1 c b b b b b c 1 . 
+        . 1 1 c c c c c 1 1 . 
+        1 c c b b b b b c c 1 
+        1 c c b b b b b c c 1 
+        1 b c b b b b b c b 1 
+        . 1 1 c c c c c 1 1 . 
+        . . 1 f f 1 f f 1 . . 
         `, SpriteKind.Player)
     controller.moveSprite(mySprite, 50, 0)
     timer = 60
@@ -245,12 +245,12 @@ blockMenu.onMenuOptionSelected(function (option, index) {
         game.showLongText("Jumper Garden", DialogLayout.Bottom)
     } else if (option == "Lv3") {
         timer = 75
-        tiles.setTilemap(tilemap`level4`)
+        tiles.setTilemap(tilemap`level62`)
         tiles.placeOnTile(mySprite, tiles.getTileLocation(0, 61))
         game.showLongText("Upper Mountain", DialogLayout.Bottom)
     } else if (option == "Lv4") {
         timer = 20
-        tiles.setTilemap(tilemap`level5`)
+        tiles.setTilemap(tilemap`level63`)
         tiles.placeOnTile(mySprite, tiles.getTileLocation(0, 10))
         game.showLongText("Summer Beach", DialogLayout.Bottom)
     } else if (option == "Lv5") {
@@ -290,29 +290,29 @@ blockMenu.onMenuOptionSelected(function (option, index) {
         game.showLongText("Harsh Jumper", DialogLayout.Bottom)
     } else if (option == "Lv12") {
         timer = 58
-        tiles.setTilemap(tilemap`level13`)
+        tiles.setTilemap(tilemap`level0`)
         tiles.placeOnTile(mySprite, tiles.getTileLocation(0, 62))
         game.showLongText("just as bad", DialogLayout.Bottom)
     } else {
         game.reset()
     }
     mySprite.setImage(img`
-        1 1 . . . . . . . . . . . . . 
-        1 1 . . . . . . . . . . . . . 
-        1 5 1 . . . . . . . . . . . . 
-        1 5 1 . . . . . . . . . . . . 
-        1 4 5 1 1 1 1 1 1 . . . . . . 
-        1 4 5 b b b b b b 1 . . . . . 
-        . 1 b b b b b b b b 1 . . . . 
-        . 1 b b b b b c c c 1 . . . . 
-        . 1 b b b b c f f f 1 . . . . 
-        1 b c b b c f f f f 1 . 1 . . 
-        1 b 1 c b b c c c c 1 1 f 1 . 
-        1 b 1 b c c c c c c 1 f 2 f 1 
-        1 e c b b b b b b b f 2 2 2 f 
-        1 e 1 b b b b b b b c f 2 f 1 
-        1 1 1 1 c c b b c c 1 f 2 f 1 
-        . . . 1 f f 1 1 f f 1 1 f 1 . 
+        . 1 . . 1 1 1 1 . . . 
+        1 5 1 1 c c c c 1 . . 
+        1 5 c c b b b b c 1 . 
+        1 c b b b b b b c 1 . 
+        1 c b b c c c c c 1 . 
+        1 c b c f f f f f c 1 
+        1 c b c f 5 f f 5 c 1 
+        1 c b c f f f f f c 1 
+        1 c b b c c c c c 1 . 
+        . 1 c b b b b b c 1 . 
+        . 1 1 c c c c c 1 1 . 
+        1 c c b b b b b c c 1 
+        1 c c b b b b b c c 1 
+        1 b c b b b b b c b 1 
+        . 1 1 c c c c c 1 1 . 
+        . . 1 f f 1 f f 1 . . 
         `)
     scene.cameraFollowSprite(mySprite)
 })
