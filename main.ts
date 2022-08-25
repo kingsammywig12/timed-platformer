@@ -5,8 +5,8 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile0`, function (sprite, l
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile1`, function (sprite, location) {
     tiles.setTileAt(location, assets.tile`transparency16`)
-    timer += 20
-    music.powerUp.play()
+    timer += -3
+    music.powerDown.play()
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile19`, function (sprite, location) {
     music.wawawawaa.playUntilDone()
@@ -18,6 +18,10 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     }
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile3`, function (sprite, location) {
+    music.baDing.playUntilDone()
+    game.reset()
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile16`, function (sprite, location) {
     music.powerUp.playUntilDone()
     game.reset()
 })
@@ -27,6 +31,7 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile20`, function (sprite, 
     music.baDing.play()
 })
 scene.onOverlapTile(SpriteKind.Player, grafxkid.blueBrickBlock, function (sprite, location) {
+    music.jumpUp.play()
     mySprite.vy = -170
 })
 blockMenu.onMenuOptionSelected(function (option, index) {
