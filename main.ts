@@ -314,6 +314,149 @@ blockMenu.onMenuOptionSelected(function (option, index) {
         . 1 1 c c c c c 1 1 . 
         . . 1 f f 1 f f 1 . . 
         `)
+    characterAnimations.loopFrames(
+    mySprite,
+    [img`
+        . 1 . . 1 1 1 1 . . . 
+        1 5 1 1 c c c c 1 . . 
+        1 5 c c b b b b c 1 . 
+        1 c b b b b b b c 1 . 
+        1 c b b b b b b c 1 . 
+        1 c b b f f f f f c 1 
+        1 c b b f 5 f f 5 c 1 
+        1 c b b f f f f f c 1 
+        1 c b b c c c c c 1 . 
+        . 1 c b b b b b c 1 . 
+        . 1 1 c c c c c 1 1 . 
+        1 c c b b b b b c c 1 
+        1 c c b b b b b c c 1 
+        1 b c b b b b b c b 1 
+        . 1 1 c c c c c 1 1 . 
+        . . 1 f f 1 f f 1 . . 
+        `,img`
+        . 1 . . 1 1 1 1 . . . 
+        1 5 1 1 c c c c 1 . . 
+        1 5 c c b b b b c 1 . 
+        1 c b b b b b b c 1 . 
+        1 c b b b b b b c 1 . 
+        1 c b b f f f f f c 1 
+        1 c b b f 5 f f 5 c 1 
+        1 c b b f f f f f c 1 
+        1 c b b c c c c c 1 . 
+        . 1 c b b b b b c 1 . 
+        1 c c c c c c c c c 1 
+        1 c c b b b b b c c 1 
+        1 b c b b b b b c b 1 
+        . 1 1 b b b b b 1 1 . 
+        . . 1 c c c c c 1 . . 
+        . . 1 f f 1 f f 1 . . 
+        `],
+    200,
+    characterAnimations.rule(Predicate.NotMoving)
+    )
+    characterAnimations.loopFrames(
+    mySprite,
+    [img`
+        . 1 . . 1 1 1 1 . . . 
+        1 5 1 1 c c c c 1 . . 
+        1 5 c c b b b b c 1 . 
+        1 c b b b b b b c 1 . 
+        1 c b b b b b b c 1 . 
+        1 c b b f f f f f c 1 
+        1 c b b f 5 f f 5 c 1 
+        1 c b b f f f f f c 1 
+        1 c b b c c c c c 1 . 
+        . 1 c b b b b b c 1 . 
+        . 1 1 c c c c c 1 1 . 
+        1 c c b b b b b c c 1 
+        1 c c b b b b b c c 1 
+        1 b c b b b b b c b 1 
+        . 1 1 c c c f f 1 1 . 
+        . . 1 f f 1 . . . . . 
+        `,img`
+        . 1 . . 1 1 1 1 . . . 
+        1 5 1 1 c c c c 1 . . 
+        1 5 c c b b b b c 1 . 
+        1 c b b b b b b c 1 . 
+        1 c b b b b b b c 1 . 
+        1 c b b f f f f f c 1 
+        1 c b b f 5 f f 5 c 1 
+        1 c b b f f f f f c 1 
+        1 c b b c c c c c 1 . 
+        . 1 c b b b b b c 1 . 
+        1 c c c c c c c c c 1 
+        1 c c b b b b b c c 1 
+        1 b c b b b b b c b 1 
+        . 1 1 b b b b b 1 1 . 
+        . . 1 f f c c c 1 . . 
+        . . . . . 1 f f 1 . . 
+        `],
+    200,
+    characterAnimations.rule(Predicate.MovingRight, Predicate.FacingRight)
+    )
+    characterAnimations.loopFrames(
+    mySprite,
+    [img`
+        . . . 1 1 1 1 . . 1 . 
+        . . 1 c c c c 1 1 5 1 
+        . 1 c b b b b c c 5 1 
+        . 1 c b b b b b b c 1 
+        . 1 c b b b b b b c 1 
+        1 c f f f f f b b c 1 
+        1 c 5 f f 5 f b b c 1 
+        1 c f f f f f b b c 1 
+        . 1 c c c c c b b c 1 
+        . 1 c b b b b b c 1 . 
+        . 1 1 c c c c c 1 1 . 
+        1 c c b b b b b c c 1 
+        1 c c b b b b b c c 1 
+        1 b c b b b b b c b 1 
+        . 1 1 f f c c c 1 1 . 
+        . . . . . 1 f f 1 . . 
+        `,img`
+        . . . 1 1 1 1 . . 1 . 
+        . . 1 c c c c 1 1 5 1 
+        . 1 c b b b b c c 5 1 
+        . 1 c b b b b b b c 1 
+        . 1 c b b b b b b c 1 
+        1 c f f f f f b b c 1 
+        1 c 5 f f 5 f b b c 1 
+        1 c f f f f f b b c 1 
+        . 1 c c c c c b b c 1 
+        . 1 c b b b b b c 1 . 
+        1 c c c c c c c c c 1 
+        1 c c b b b b b c c 1 
+        1 b c b b b b b c b 1 
+        . 1 1 b b b b b 1 1 . 
+        . . 1 c c c f f 1 . . 
+        . . 1 f f 1 . . . . . 
+        `],
+    200,
+    characterAnimations.rule(Predicate.MovingLeft, Predicate.FacingLeft)
+    )
+    characterAnimations.loopFrames(
+    mySprite,
+    [img`
+        . . . 1 1 1 1 . . 1 . 
+        . . 1 c c c c 1 1 5 1 
+        . 1 c b b b b c c 5 1 
+        . 1 c b b b b b b c 1 
+        . 1 c b b b b b b c 1 
+        1 c f f f f f b b c 1 
+        1 c 5 f f 5 f b b c 1 
+        1 c f f f f f b b c 1 
+        . 1 c c c c c b b c 1 
+        . 1 c b b b b b c 1 . 
+        . 1 1 c c c c c 1 1 . 
+        1 c c b b b b b c c 1 
+        1 c c b b b b b c c 1 
+        1 b c b b b b b c b 1 
+        . 1 1 f f c c c 1 1 . 
+        . . . . . 1 f f 1 . . 
+        `],
+    200,
+    characterAnimations.rule(Predicate.MovingUp)
+    )
     scene.cameraFollowSprite(mySprite)
 })
 let textSprite: TextSprite = null
