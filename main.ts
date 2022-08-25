@@ -289,7 +289,7 @@ blockMenu.onMenuOptionSelected(function (option, index) {
         tiles.placeOnTile(mySprite, tiles.getTileLocation(0, 10))
         game.showLongText("Harsh Jumper", DialogLayout.Bottom)
     } else if (option == "Lv12") {
-        timer = 68
+        timer = 58
         tiles.setTilemap(tilemap`level13`)
         tiles.placeOnTile(mySprite, tiles.getTileLocation(0, 62))
         game.showLongText("just as bad", DialogLayout.Bottom)

@@ -6,7 +6,8 @@
         "block-menu": "github:riknoll/arcade-custom-menu#60b1973e2cfbd8f2662064bd619c76a8c5e7639f",
         "tilemaps": "github:microsoft/pxt-tilemaps#v1.11.0",
         "arcade-text": "github:microsoft/arcade-text#v1.3.0",
-        "grafxkid-tiles": "github:riknoll/grafxkid-tiles#d2f6f98257ac100eb72317eec5bfe1f55ecbc1cd"
+        "grafxkid-tiles": "github:riknoll/grafxkid-tiles#d2f6f98257ac100eb72317eec5bfe1f55ecbc1cd",
+        "arcade-character-animations": "github:microsoft/arcade-character-animations#v0.0.2"
     },
     "files": [
         "main.blocks",
