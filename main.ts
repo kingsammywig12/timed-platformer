@@ -28,7 +28,7 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile16`, function (sprite, 
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile20`, function (sprite, location) {
     tiles.setTileAt(location, assets.tile`transparency16`)
     timer += 7
-    music.powerUp.play()
+    music.jumpUp.play()
 })
 scene.onOverlapTile(SpriteKind.Player, grafxkid.blueBrickBlock, function (sprite, location) {
     music.jumpUp.play()
