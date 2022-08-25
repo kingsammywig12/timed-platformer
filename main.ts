@@ -452,7 +452,7 @@ blockMenu.showMenu([
 "Lv4",
 "Lv5",
 "lv6",
-"Fall",
+"fall",
 "Lv7",
 "Lv8",
 "Lv9",
